@@ -1,0 +1,268 @@
+@font-face {
+    font-family: "Breezeblocks";
+    src: url('font/Breezeblocks.ttf') format('truetype');
+}
+
+body {
+    font-family: "Breezeblocks", "PT Sans", Calibri, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(125, 141, 133);
+    color: white;
+    height: 310vh;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    text-align: center;
+    margin-top: 1rem;
+    height: auto;
+}
+.header p {
+    font-size: 5rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    background-color: rgba(250, 235, 215, 0);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #47474700;
+    width: 100%;
+    margin-top: 2rem;
+    z-index: 2;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-family: circular, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-right: 20px;
+    margin-bottom: 1rem;
+}
+.MarriedSign{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 27rem;
+    background-color: rgba(0, 0, 0, 0);
+}
+.MarriedSign p {
+    font-size: 7rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    background-color: rgba(250, 235, 215, 0);
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 60rem; /* Adjust based on image height */
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px; 
+    position: absolute;
+    will-change: transform;
+}
+
+.carousel img {
+    object-fit: contain;
+    width: auto;
+    max-height: 60rem;
+}
+
+.below-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(127, 255, 212, 0);
+    margin: auto;
+    margin-top: 8rem;
+    width: 50%;
+    height: auto;
+    bottom: 0;
+    z-index: 2;
+}
+
+.below-carousel p1, p3{
+    font-size: 10rem;
+    margin-top: 2rem;
+    font-weight: 400;
+    padding: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    background-color: rgba(250, 235, 215, 0);
+}
+
+.below-carousel p2{
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    background-color: rgba(250, 235, 215, 0);
+}
+
+.below-carousel p4{
+    margin-top: 8rem;
+    font-size: 3.3rem;
+    font-weight: 400;
+    padding: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    background-color: rgba(250, 235, 215, 0);
+}
+.below-carousel p5{
+    margin-top: .7rem;
+    font-family: 'circular', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    background-color: rgba(250, 235, 215, 0);
+}
+.below-carousel button{
+    margin-top: 5rem;
+    width: 18rem;
+    height: 3rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.below-carousel a {
+    color: white;
+    text-decoration: none;
+}
+
+.below-carousel img{
+    margin-top: 5rem;
+    width: 100%;
+    height: auto;
+}
+
+#Countdown{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 5vw;
+    margin-top: 4rem;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.Times{
+    display: flex;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.73vw;
+    z-index: 2;
+    color: #ffffff;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0);
+}
+.Days{
+    margin-left: 20%;
+}
+.Hours{
+    margin-left: 10%;
+}
+.Minutes{
+    margin-left: 5%;
+}
+.Seconds{
+    margin-left: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 0.8rem;
+        height: 190vh;
+    }
+    .header{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+    .MarriedSign {
+        margin-top: 15rem;
+    }
+    .MarriedSign p {
+        font-size: 4rem;
+    }
+    .carousel-container {
+        height: 35rem;
+    }
+    .carousel img {
+        max-height: 35rem;
+    }
+    .below-carousel {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .below-carousel button{
+        width: 10rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+    .below-carousel p1, .below-carousel p3 {
+        font-size: 7rem;
+    }
+    .below-carousel p2 {
+        font-size: 2rem;
+    }
+    .below-carousel p4 {
+        font-size: 4rem;
+    }
+    .below-carousel p5 {
+        font-size: 1.2rem;
+    }
+    .below-carousel button {
+        width: 15rem;
+        height: 3rem;
+        font-size: 0.8rem;
+        color: rgb(0, 0, 0);
+    }
+    #Countdown {
+        font-size: 10vw;
+    }
+    .Times {
+        font-size: 3vw;
+    }
+    .Days{
+        margin-left: 23%;
+    }
+    .Hours{
+        margin-left: 10%;
+    }
+    .Minutes{
+        margin-left: 5%;
+    }
+    .Seconds{
+        margin-left: 5%;
+    }
+}
