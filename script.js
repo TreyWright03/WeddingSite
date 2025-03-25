@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel");
     const images = Array.from(carousel.children);
     
-    let speed = 2; // Adjust scrolling speed
+    let speed = 1; // Adjust scrolling speed
     let translateX = 0;
 
     function moveCarousel() {

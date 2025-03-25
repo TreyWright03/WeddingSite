@@ -9,7 +9,7 @@ body {
     padding: 0;
     background-color: rgb(125, 141, 133);
     color: white;
-    height: 310vh;
+    height: 345vh;
 }
 main {
     display: flex;
@@ -74,7 +74,7 @@ main {
     width: 100%;
     overflow: hidden;
     position: relative;
-    height: 60rem; /* Adjust based on image height */
+    height: 67rem; /* Adjust based on image height */
     display: flex;
     align-items: center;
 }
@@ -91,7 +91,7 @@ main {
 .carousel img {
     object-fit: contain;
     width: auto;
-    max-height: 60rem;
+    max-height: 67rem;
 }
 
 .below-carousel {
@@ -200,7 +200,7 @@ main {
 @media only screen and (max-width: 600px) {
     body {
         font-size: 0.8rem;
-        height: 190vh;
+        height: 193vh;
     }
     .header{
         display: none;
@@ -249,6 +249,7 @@ main {
     }
     #Countdown {
         font-size: 10vw;
+        margin-top: 3rem;
     }
     .Times {
         font-size: 3vw;
