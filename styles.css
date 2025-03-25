@@ -9,7 +9,6 @@ body {
     padding: 0;
     background-color: rgb(125, 141, 133);
     color: white;
-    height: 345vh;
 }
 main {
     display: flex;
@@ -30,6 +29,10 @@ main {
     text-transform: none;
     letter-spacing: normal;
     background-color: rgba(250, 235, 215, 0);
+}
+
+.menu{
+    display: none;
 }
 
 .navbar {
@@ -183,6 +186,7 @@ main {
     color: #ffffff;
     width: 100%;
     background-color: rgba(0, 255, 255, 0);
+    margin-bottom: 4rem;
 }
 .Days{
     margin-left: 20%;
@@ -200,19 +204,41 @@ main {
 @media only screen and (max-width: 600px) {
     body {
         font-size: 0.8rem;
-        height: 193vh;
     }
     .header{
         display: none;
+    }
+    .menu{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        height: 5rem;
+        width: 100%;
+        z-index: 5;
+    }
+    .menu-circle{
+        display: flex;
+        background-color: white;
+        width: 2.7rem;
+        height: 2.7rem;
+        margin-left: auto;
+        margin-right: 3%;
+        border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu-circle img{
+        height: 1.70rem;
+        width: 1.70rem;
     }
     .navbar{
         display: none;
     }
     .MarriedSign {
-        margin-top: 15rem;
+        margin-top: 16rem;
     }
     .MarriedSign p {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     .carousel-container {
         height: 35rem;
@@ -253,6 +279,7 @@ main {
     }
     .Times {
         font-size: 3vw;
+        margin-bottom: 3rem;
     }
     .Days{
         margin-left: 23%;
