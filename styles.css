@@ -10,7 +10,18 @@ body {
     background-color: rgb(125, 141, 133);
     color: white;
     overflow-x: hidden;
+    scrollbar-color: rgb(125, 141, 133) transparent;
 }
+
+* {
+    scrollbar-width: thin;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -54,6 +65,11 @@ main {
     margin-right: 20px;
     margin-bottom: 1rem;
 }
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
 .MarriedSign{
     position: absolute;
     z-index: 2;
