@@ -53,3 +53,15 @@ var x = setInterval(function() {
         document.getElementById("Countdown").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+
+
+
+function displayhamburger() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
