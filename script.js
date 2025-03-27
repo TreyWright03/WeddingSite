@@ -55,13 +55,10 @@ var x = setInterval(function() {
 }, 1000);
 
 
+document.getElementById("circle").addEventListener("click", function() {
+    document.getElementById("links").classList.toggle("active")
+});
 
-
-function displayhamburger() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
-    }
-}
+document.getElementById("X").addEventListener("click", function() {
+    document.getElementById("links").classList.remove("active");
+});

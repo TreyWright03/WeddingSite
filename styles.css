@@ -10,11 +10,11 @@ body {
     background-color: rgb(125, 141, 133);
     color: white;
     overflow-x: hidden;
-    scrollbar-color: rgb(125, 141, 133) transparent;
 }
 
 * {
     scrollbar-width: thin;
+    scrollbar-color: rgb(255, 255, 255) transparent;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -23,7 +23,6 @@ body {
 }
 
 main {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -43,7 +42,10 @@ main {
     background-color: rgba(250, 235, 215, 0);
 }
 
-.MC{
+.mainpage{
+    display: none;
+}
+.links{
     display: none;
 }
 
@@ -226,6 +228,108 @@ main {
         display: none;
     }
 
+    .mainpage{
+        display: flex;
+        position: absolute;
+        margin-top: 3%;
+        width: 97%;
+        height: 2.7rem;
+        z-index: 10;
+        justify-content: end;
+        align-items: center;
+    }
+    #circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.7rem;
+        width: 2.7rem;
+        background-color: #ffffff;
+        border-radius: 100%;
+        border: none;
+        cursor: pointer;
+    }
+
+    #circle p {
+        color: black;
+        font-size: 2.2rem;
+    }
+
+    .links.active{
+        overflow-x: hidden;
+        display: flex;
+        z-index: 100;
+        flex-direction: column;
+        position: fixed;
+        width: 65%;
+        right: 0%;
+        height: 100vh;
+        background-color: #ffffff;
+        transition: right .5s ease-in-out;
+    }
+    
+    #X{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3%;
+        margin-left: 80%;
+        height: 2.7rem;
+        width: 2.7rem;
+        background-color: #ffffff;
+        border-radius: 100%;
+        border: none;
+        cursor: pointer;
+    }
+    #X p{
+        color: black;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .pages {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        margin-left: 20%;
+        font-size: 2rem;
+    }
+
+    .links p1{
+        color: rgb(0, 0, 0);
+        font-family: circular, sans-serif;
+        font-size: 1.3rem;
+        margin-left: 12%;
+        font-weight: bold;
+    }
+    .links p2{
+        color: rgb(0, 0, 0);
+        font-family: circular, sans-serif;
+        font-size: .8rem;
+        margin-left: 12%;
+        margin-top: 2%;
+        font-weight: lighter;
+    }
+    .links p3{
+        color: rgb(0, 0, 0);
+        font-family: circular, sans-serif;
+        font-size: .9rem;
+        margin-left: 12%;
+        margin-top: 2%;
+        font-weight: lighter;
+        margin-bottom: 5.2rem;
+    }
+    .links a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-family: circular, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-left: 12%;
+        margin-bottom: 1.7rem;
+    }
+
     .navbar{
         display: none;
     }
@@ -289,104 +393,4 @@ main {
         margin-left: 5%;
     }
 
-
-    .MC{
-        display: flex;
-        position: absolute;
-        z-index: 10;
-        margin-top: 3%;
-        width: 97%;
-        height: 2.7rem;
-        justify-content: end;
-    }
-
-    label .menu {
-        display: flex;
-        margin-right: 3%;
-        align-items: center;
-        justify-content: center;
-        z-index: 100;
-        width: 2.7rem;
-        height: 2.7rem;
-        background: #FFF;
-        border-radius: 100%;
-        cursor: pointer;
-        
-    }
-
-    label .hamburger {
-        position: relative;
-        width: 20px;
-        height: 2px;
-        background: #000000;
-        display: block;
-        -webkit-transform-origin: center;
-        transform-origin: center;
-        -webkit-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
-    }
-
-    label .hamburger:after, label .hamburger:before {
-        -webkit-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
-        content: "";
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background: #000000;
-    }
-
-    label .hamburger:before { top: -7px; }
-
-    label .hamburger:after { bottom: -7px; }
-
-    label input { display: none; }
-
-    label input:checked + .menu {
-        box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #ffffff;
-        border-radius: 0;
-    }
-
-    label input:checked + .menu .hamburger {
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        
-    }
-
-    label input:checked + .menu .hamburger:after {
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-        bottom: 0;
-        
-    }
-
-    label input:checked + .menu .hamburger:before {
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-        top: 0;
-        
-    }
-
-    label input:checked + .menu + ul { opacity: 1; }
-
-    label ul {
-        z-index: 200;
-        position: absolute;
-        width: 50%;
-        height: 100vh;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        -webkit-transition: .25s 0s ease-in-out;
-        transition: .25s 0s ease-in-out;
-    }
-
-    label a {
-        margin-top: 1rem;
-        display: block;
-        color: #000000;
-        font-size: 3rem;
-        text-decoration: none;
-    }
 }
